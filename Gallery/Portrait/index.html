@@ -156,4 +156,94 @@
     }
   }
 </style>
+
+<style>
+  /* 1. 重置首页默认边距，让产品区块全屏 */
+  .page-content {
+    padding: 0 !important;  /* 取消页面内边距 */
+    margin: 0 !important;
+  }
+  .container {
+    max-width: 100% !important;  /* 容器全屏，无宽度限制 */
+    padding: 0 !important;
+  }
+  
+  /* 2. 产品区块样式：每个产品占满一屏（可选，也可按图片高度自适应） */
+  .product-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;  /* 用于按钮定位 */
+  }
+  
+  /* 3. 产品图片：响应式，避免变形 */
+  .product-img {
+    width: 100%;
+    height: auto;  /* 保持图片比例 */
+    display: block;
+  }
+  
+  /* 4. 产品文字与按钮：居中显示（可调整为左/右对齐） */
+  .product-info {
+    position: absolute;  /* 按钮悬浮在图片上（Apple常用风格） */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* 绝对居中 */
+    text-align: center;
+  }
+  
+  /* 5. 产品标题：简洁白色（若图片浅色，可改为黑色） */
+  .product-title {
+    font-size: 2.5rem;  /* 标题大小，可调整 */
+    color: #fff;  /* 白色文字（适合深色图片），浅色图片改#000 */
+    margin-bottom: 20px;
+    font-weight: normal;  /* Apple标题无粗体 */
+  }
+  
+  /* 6. 按钮样式：圆角、简洁配色 */
+  .product-buttons {
+    display: flex;
+    gap: 20px;  /* 按钮间距 */
+    justify-content: center;
+  }
+  .product-btn {
+    padding: 12px 24px;  /* 按钮内边距 */
+    border-radius: 30px;  /* 圆角（Apple风格） */
+    font-size: 1rem;
+    text-decoration: none;  /* 取消下划线 */
+    transition: background-color 0.3s;  /*  hover过渡效果 */
+  }
+  /* 了解详情按钮：白色背景+黑色文字（可调整） */
+  .detail-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+  }
+  .detail-btn:hover {
+    background-color: rgba(255,255,255,0.8);  /* hover透明效果 */
+  }
+  /* 咨询按钮：黑色背景+白色文字（对比色） */
+  .contact-btn {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+  }
+  .contact-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* 7. 移动端适配：调整标题和按钮大小 */
+  @media (max-width: 768px) {
+    .product-title {
+      font-size: 1.8rem;
+    }
+    .product-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+    .product-buttons {
+      gap: 15px;
+    }
+  }
+</style>
 <meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-images"></i><span> 作品</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/Portrait/"><i class="fa-fw fas fa-camera"></i><span> 人像</span></a></li><li><a class="site-page child" href="/Gallery/Landscape/"><i class="fa-fw fas fa-camera"></i><span> 风景</span></a></li><li><a class="site-page child" href="/Gallery/Polaroid/"><i class="fa-fw fas fa-camera"></i><span> 宝丽来</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-tags"></i><span> 猜你想了解</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Product/Calendar/"><i class="fa-fw fas fa-calendar"></i><span> 超越365台历</span></a></li><li><a class="site-page child" href="/Product/Postcard/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来明信片盲盒</span></a></li><li><a class="site-page child" href="/Product/Letter/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来手写信</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Contact/"><i class="fa-fw fas fa-envelope"></i><span> 联系</span></a></div><div class="menus_item"><a class="site-page" href="/About/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div></div></div><div class="page type-Portrait" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/img/portrait.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-images"></i><span> 作品</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/Portrait/"><i class="fa-fw fas fa-camera"></i><span> 人像</span></a></li><li><a class="site-page child" href="/Gallery/Landscape/"><i class="fa-fw fas fa-camera"></i><span> 风景</span></a></li><li><a class="site-page child" href="/Gallery/Polaroid/"><i class="fa-fw fas fa-camera"></i><span> 宝丽来</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-tags"></i><span> 猜你想了解</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Product/Calendar/"><i class="fa-fw fas fa-calendar"></i><span> 超越365台历</span></a></li><li><a class="site-page child" href="/Product/Postcard/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来明信片盲盒</span></a></li><li><a class="site-page child" href="/Product/Letter/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来手写信</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Contact/"><i class="fa-fw fas fa-envelope"></i><span> 联系</span></a></div><div class="menus_item"><a class="site-page" href="/About/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">Portrait</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="container" id="article-container"></div></div></main><footer id="footer" style="background: white;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Simon</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
