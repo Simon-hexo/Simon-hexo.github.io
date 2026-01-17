@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>联系我们</title><meta name="author" content="Simon"><meta name="copyright" content="Simon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="联系我们">
+<meta property="og:url" content="https://www.tianfoto.com/blog/index.html">
+<meta property="og:site_name" content="联系我们">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.tianfoto.com/img/avatar.jpg">
+<meta property="article:author" content="Simon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.tianfoto.com/img/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "联系我们",
+  "alternateName": [
+    "www.tianfoto.com"
+  ],
+  "url": "https://www.tianfoto.com/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.tianfoto.com/blog/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"Author: Simon","link":"Link: ","source":"Source: 联系我们","info":"Copyright belongs to the author. For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source."}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '联系我们',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><style>#page-header.full_page{background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;background-color:#ffffff;}@media(max-width:768px){#page-header.full_page{background-size:cover!important;}}</style><style>@media(min-width:769px){#page-header.full_page{background-image:url('/img/cover2.jpg')!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;}}@media(max-width:768px){#page-header.full_page{background-image:url('/img/cover3.png')!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;}}</style><style>
+  /* 桌面端也显示首页社交图标 */
+  #page-header #site_social_icons {
+    display: block !important;
+  }
+</style>
+<style>
+  @media (min-width: 769px) {
+    #page-header #site_social_icons .social-icon {
+      font-size: 2.2em !important;
+      margin: 0 12px;
+    }
+  }
+  @media (max-width: 768px) {
+    #page-header #site_social_icons .social-icon {
+      font-size: 1.8em !important;
+      margin: 0 10px;
+    }
+  }
+</style>
+
+<style>
+  /* 1. 重置首页默认边距，让产品区块全屏 */
+  .page-content {
+    padding: 0 !important;  /* 取消页面内边距 */
+    margin: 0 !important;
+  }
+  .container {
+    max-width: 100% !important;  /* 容器全屏，无宽度限制 */
+    padding: 0 !important;
+  }
+  
+  /* 2. 产品区块样式：每个产品占满一屏（可选，也可按图片高度自适应） */
+  .product-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;  /* 用于按钮定位 */
+  }
+  
+  /* 3. 产品图片：响应式，避免变形 */
+  .product-img {
+    width: 100%;
+    height: auto;  /* 保持图片比例 */
+    display: block;
+  }
+  
+  /* 4. 产品文字与按钮：居中显示（可调整为左/右对齐） */
+  .product-info {
+    position: absolute;  /* 按钮悬浮在图片上（Apple常用风格） */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* 绝对居中 */
+    text-align: center;
+  }
+  
+  /* 5. 产品标题：简洁白色（若图片浅色，可改为黑色） */
+  .product-title {
+    font-size: 2.5rem;  /* 标题大小，可调整 */
+    color: #fff;  /* 白色文字（适合深色图片），浅色图片改#000 */
+    margin-bottom: 20px;
+    font-weight: normal;  /* Apple标题无粗体 */
+  }
+  
+  /* 6. 按钮样式：圆角、简洁配色 */
+  .product-buttons {
+    display: flex;
+    gap: 20px;  /* 按钮间距 */
+    justify-content: center;
+  }
+  .product-btn {
+    padding: 12px 24px;  /* 按钮内边距 */
+    border-radius: 30px;  /* 圆角（Apple风格） */
+    font-size: 1rem;
+    text-decoration: none;  /* 取消下划线 */
+    transition: background-color 0.3s;  /*  hover过渡效果 */
+  }
+  /* 了解详情按钮：白色背景+黑色文字（可调整） */
+  .detail-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+  }
+  .detail-btn:hover {
+    background-color: rgba(255,255,255,0.8);  /* hover透明效果 */
+  }
+  /* 咨询按钮：黑色背景+白色文字（对比色） */
+  .contact-btn {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+  }
+  .contact-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* 7. 移动端适配：调整标题和按钮大小 */
+  @media (max-width: 768px) {
+    .product-title {
+      font-size: 1.8rem;
+    }
+    .product-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+    .product-buttons {
+      gap: 15px;
+    }
+  }
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-images"></i><span> 作品</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/Portrait/"><i class="fa-fw fas fa-camera"></i><span> 人像</span></a></li><li><a class="site-page child" href="/Gallery/Landscape/"><i class="fa-fw fas fa-camera"></i><span> 风景</span></a></li><li><a class="site-page child" href="/Gallery/Polaroid/"><i class="fa-fw fas fa-camera"></i><span> 宝丽来</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-tags"></i><span> 猜你想了解</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Product/Calendar/"><i class="fa-fw fas fa-calendar"></i><span> 超越365台历</span></a></li><li><a class="site-page child" href="/Product/Postcard/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来明信片盲盒</span></a></li><li><a class="site-page child" href="/Product/Letter/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来手写信</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Contact/"><i class="fa-fw fas fa-envelope"></i><span> 联系</span></a></div><div class="menus_item"><a class="site-page" href="/About/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/cover1.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-images"></i><span> 作品</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/Portrait/"><i class="fa-fw fas fa-camera"></i><span> 人像</span></a></li><li><a class="site-page child" href="/Gallery/Landscape/"><i class="fa-fw fas fa-camera"></i><span> 风景</span></a></li><li><a class="site-page child" href="/Gallery/Polaroid/"><i class="fa-fw fas fa-camera"></i><span> 宝丽来</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-tags"></i><span> 猜你想了解</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Product/Calendar/"><i class="fa-fw fas fa-calendar"></i><span> 超越365台历</span></a></li><li><a class="site-page child" href="/Product/Postcard/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来明信片盲盒</span></a></li><li><a class="site-page child" href="/Product/Letter/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来手写信</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Contact/"><i class="fa-fw fas fa-envelope"></i><span> 联系</span></a></div><div class="menus_item"><a class="site-page" href="/About/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">联系我们</h1><div id="site_social_icons"><a class="social-icon" href="mailto:tian.fotografie@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/img/wechat2.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin" style="color: #07c160;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout hide-aside" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/12/intro/" title="我们想做的事">我们想做的事</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-10-12T11:12:00.000Z" title="Created 2025-10-12 19:12:00">2025-10-12</time></span></div><div class="content">🌍 关于网站欢迎来到我们的创意社区——在这里，摄影与情感相遇，每一个瞬间都化作艺术。我们呈现原创的宝丽来项目，连接全球热爱摄影的朋友，邀请每一位加入，共同打造真正美好的作品与体验。  📦 我们的产品              📅 2026 全球宝丽来联合台历            联合全球十余位宝丽来摄影师与社区投稿共同创作。         每一天都呈现一张 1:1 的宝丽来小图——来自世界各地的微小幸福。          查看详情                 ✉️ 宝丽来明信片盲盒            来自全球投票与投稿造成的触感合集，质地温润、可触可感。         每一张都承载故事——正面定格瞬间，背面书写创作者的心迹与旅程。          查看详情                 🖊️ 宝丽来手写信            从德国漂洋过海的一封手写信，小天学长与你聊聊近期的烦恼，或送上温暖祝福。         一封一念，手写的温度与真诚；轻装抵达，愿你被善意治愈。          了解/订制        📷 摄影作品展示我们会定期精选呈现团...</div></div></div></div></div></main><footer id="footer" style="background: white;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Simon</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
