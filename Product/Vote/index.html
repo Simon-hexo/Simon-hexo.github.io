@@ -6,8 +6,8 @@
 <meta property="og:description" content="投票                      0                        0                        0                        0                        0                        0                        0">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.tianfoto.com/img/avatar.jpg">
-<meta property="article:published_time" content="2026-03-02T05:50:19.817Z">
-<meta property="article:modified_time" content="2026-03-02T05:50:19.817Z">
+<meta property="article:published_time" content="2026-03-02T06:05:36.620Z">
+<meta property="article:modified_time" content="2026-03-02T06:05:36.620Z">
 <meta property="article:author" content="Simon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.tianfoto.com/img/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.tianfoto.com/Product/Vote/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
@@ -323,43 +323,67 @@ const btns = Array.from(document.querySelectorAll('.vote-btn'));
 const ids = btns.map(b => b.dataset.id);
 const tipError = document.querySelector('.vote-error');
 function setCount(id, n){const el=document.querySelector(`.vote-btn[data-id="${id}"] .count`);if(el)el.textContent=String(n||0)}
-function markLiked(btn){btn.classList.add('liked');btn.setAttribute('disabled','')}
+function markLiked(btn){btn.classList.add('liked')}
+function unmarkLiked(btn){btn.classList.remove('liked')}
 function hasLiked(id){return localStorage.getItem(`liked::${id}`)==='1'}
 function setLiked(id){localStorage.setItem(`liked::${id}`,'1')}
 function removeLiked(id){localStorage.removeItem(`liked::${id}`)}
 for(const b of btns){if(hasLiked(b.dataset.id))markLiked(b)}
 async function loadCounts(){
   if(!client){return}
-  const { data, error } = await client.from('votes').select('photo_id,count').in('photo_id', ids)
+  const { data, error } = await client.from('votes').select('name,count').in('name', ids)
   if(error){tipError.hidden=false;return}
-  const map=new Map(data.map(row=>[row.photo_id,row.count]))
+  const map=new Map(data.map(row=>[row.name,row.count]))
   for(const id of ids)setCount(id,map.get(id)||0)
 }
 loadCounts()
 async function increment(id){
-  const { data } = await client.from('votes').select('count').eq('photo_id', id).maybeSingle()
+  const { data } = await client.from('votes').select('count').eq('name', id).maybeSingle()
   const current=data?.count||0
-  const { error } = await client.from('votes').upsert({ photo_id: id, count: current+1 })
+  const { error } = await client.from('votes').upsert({ name: id, count: current+1 })
+  if(error)throw error
+}
+async function decrement(id){
+  const { data } = await client.from('votes').select('count').eq('name', id).maybeSingle()
+  const current=data?.count||0
+  const next=current>0?current-1:0
+  const { error } = await client.from('votes').upsert({ name: id, count: next })
   if(error)throw error
 }
 btns.forEach(btn=>{
   btn.addEventListener('click',async()=>{
     if(!client){alert('后端未配置');return}
     const id=btn.dataset.id
-    if(hasLiked(id))return
-    setLiked(id)
-    markLiked(btn)
     const countEl=btn.querySelector('.count')
-    const next=(parseInt(countEl.textContent||'0',10)||0)+1
-    setCount(id,next)
-    try{
-      await increment(id)
-    }catch(e){
+    const current=(parseInt(countEl.textContent||'0',10)||0)
+    if(hasLiked(id)){
       removeLiked(id)
-      btn.classList.remove('liked')
-      btn.removeAttribute('disabled')
-      setCount(id,next-1)
-      alert('点赞失败，请稍后重试')
+      unmarkLiked(btn)
+      const next=Math.max(current-1,0)
+      setCount(id,next)
+      try{
+        await decrement(id)
+      }catch(e){
+        // rollback
+        setLiked(id)
+        markLiked(btn)
+        setCount(id,current)
+        alert('取消失败，请稍后重试')
+      }
+      return
+    }else{
+      setLiked(id)
+      markLiked(btn)
+      const next=current+1
+      setCount(id,next)
+      try{
+        await increment(id)
+      }catch(e){
+        removeLiked(id)
+        unmarkLiked(btn)
+        setCount(id,current)
+        alert('点赞失败，请稍后重试')
+      }
     }
   })
 })
