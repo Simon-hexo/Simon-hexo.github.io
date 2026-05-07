@@ -7,7 +7,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.tianfoto.com/img/avatar.jpg">
 <meta property="article:published_time" content="2026-01-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-05-07T13:43:32.708Z">
+<meta property="article:modified_time" content="2026-05-07T13:49:54.941Z">
 <meta property="article:author" content="Simon">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.tianfoto.com/img/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.tianfoto.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
@@ -263,7 +263,7 @@
 
 <section class="product-section">
   <div class="product-container">
-    <img src="/img/final100_cover1.jpg" alt="Final 100" class="product-img">
+    <img src="/img/final100_cover.jpg" alt="Final 100" class="product-img">
     <div class="product-info">
       <h2 class="product-title">Final 100</h2>
       <div class="product-buttons">
@@ -301,26 +301,24 @@
 </section>
 
 <style>
-/* 容器间距 */
+/* ================= 电脑端（保持不变） ================= */
 .product-section { margin-bottom: 24px; }
 
-/* 容器：统一圆角并强制裁切 */
 .product-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 16px; /* 统一圆角 */
+  border-radius: 16px;
 }
 
-/* 图片：消除默认间距，强制固定高度以对齐 */
 .product-img {
   width: 100%;
-  height: 520px; /* 电脑端固定高度 */
-  object-fit: cover; /* 核心属性：确保图片不拉伸变形 */
+  height: 520px; 
+  object-fit: cover; 
   display: block;
-  margin: 0 !important; /* 消除主题默认间距 */
+  margin: 0 !important; 
   border-radius: 16px;
 }
 
@@ -355,20 +353,23 @@
 .contact-btn { background: #111; color: #fff; }
 .contact-btn:hover { background: #000; transform: translateY(-2px); }
 
-/* 响应式调整 */
+/* ================= 平板端适配 ================= */
 @media (max-width: 768px) {
-  .product-img { height: 350px; } /* 平板端固定高度 */
-  .product-title { font-size: 1.7rem; }
-  .product-info { top: 54%; }
+  .product-section { margin-bottom: 16px; } /* 缩小模块间距 */
+  .product-img { height: 260px; } /* 大幅压扁高度 */
+  .product-info { top: 50%; padding: 10px; } /* 文字居中对齐 */
+  .product-title { font-size: 1.6rem; margin-bottom: 10px; }
   .product-buttons { gap: 10px; }
-  .product-btn { font-size: .95rem; padding: .6rem 1.1rem; border-radius: 44px; }
+  .product-btn { font-size: .9rem; padding: .5rem 1rem; border-radius: 44px; }
 }
 
+/* ================= 手机端适配 ================= */
 @media (max-width: 480px) {
-  .product-img { height: 330px; } /* 手机端固定高度，保持所有海报一致 */
-  .product-info { top: 52%; width: 95%; max-width: 720px; }
-  .product-title { font-size: 1.4rem; letter-spacing: .2px; }
-  .product-buttons { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 6px; flex-wrap: nowrap; }
-  .product-btn { width: auto; min-width: 100px; font-size: .85rem; padding: .5rem .8rem; border-radius: 42px; white-space: nowrap; }
+  .product-section { margin-bottom: 12px; } /* 模块紧凑排列，省出更多屏幕空间 */
+  .product-img { height: 200px; } /* 高度缩短至200px，一屏可以显示多个产品 */
+  .product-info { top: 50%; width: 95%; max-width: 720px; padding: 10px; }
+  .product-title { font-size: 1.25rem; letter-spacing: 0; margin-bottom: 8px; }
+  .product-buttons { gap: 8px; }
+  .product-btn { min-width: 85px; font-size: .8rem; padding: .4rem .7rem; }
 }
 </style></div></div></main><footer id="footer" style="background: white;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Simon</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
