@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.tianfoto.com/Gallery/Polaroid/index.html</loc>
+    
+    <lastmod>2026-09-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.tianfoto.com/Product/Postcard/index.html</loc>
     
     <lastmod>2026-09-19</lastmod>
@@ -93,15 +102,6 @@
   
   <url>
     <loc>https://www.tianfoto.com/Gallery/Portrait/index.html</loc>
-    
-    <lastmod>2025-10-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.tianfoto.com/Gallery/Polaroid/index.html</loc>
     
     <lastmod>2025-10-12</lastmod>
     
