@@ -96,8 +96,15 @@ a:hover { text-decoration: underline; }
   margin: 0 0 10px; font-size: clamp(28px, 3.4vw, 44px);
   font-weight: 600; letter-spacing: -0.02em; line-height: 1.1;
 }
-.section-head p { margin: 0; color: var(--text-2); font-size: 19px; max-width: 640px; }
+.section-head p {
+  margin: 0; color: var(--text-2); font-size: 19px; max-width: 680px;
+  text-wrap: pretty;          /* 浏览器主动避免「酬。」这类孤字独占一行 */
+  line-break: strict;
+}
 .section-dark .section-head p { color: #a1a1a6; }
+
+/* 中文里不希望被拆开的词 */
+.nw { white-space: nowrap; }
 
 /* ---------- 首页 Hero ---------- */
 .hero { padding: 72px 22px 0; text-align: center; }
@@ -110,6 +117,7 @@ a:hover { text-decoration: underline; }
 .hero-text {
   margin: 20px auto 0; max-width: 620px;
   font-size: clamp(17px, 2vw, 21px); color: var(--text-2);
+  text-wrap: pretty; line-break: strict;
 }
 .hero-actions {
   margin-top: 28px; display: flex; gap: 26px;
