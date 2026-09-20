@@ -56,15 +56,6 @@
   </url>
   
   <url>
-    <loc>https://tianfoto.com/en/Product/Final100/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tianfoto.com/en/Product/Letter/</loc>
     
     <lastmod>2026-09-20</lastmod>
@@ -75,6 +66,15 @@
   
   <url>
     <loc>https://tianfoto.com/en/Product/Postcard/</loc>
+    
+    <lastmod>2026-09-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/en/Product/Final100/</loc>
     
     <lastmod>2026-09-20</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://tianfoto.com/Gallery/Landscape/</loc>
+    <loc>https://tianfoto.com/Gallery/Portrait/</loc>
     
     <lastmod>2026-09-20</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://tianfoto.com/Gallery/Portrait/</loc>
+    <loc>https://tianfoto.com/Gallery/Landscape/</loc>
     
     <lastmod>2026-09-20</lastmod>
     
