@@ -300,6 +300,12 @@ a:hover { text-decoration: underline; }
   .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* 中等宽度：收紧导航间距，避免换行 */
+@media (max-width: 1080px) {
+  .nav-links { gap: 18px; }
+  .nav-inner { gap: 20px; }
+}
+
 @media (max-width: 768px) {
   .section { padding: 64px 20px; }
   .hero { padding-top: 44px; }
@@ -315,6 +321,8 @@ a:hover { text-decoration: underline; }
 
   /* 移动端导航：折叠 */
   .nav-inner { justify-content: space-between; }
+  .nav-mark { width: 20px; height: 20px; }
+  .nav-brand { font-size: 17px; gap: 7px; }
   .nav-toggle {
     display: flex; flex-direction: column; justify-content: center; gap: 5px;
     width: 40px; height: 34px; background: none; border: 0; cursor: pointer;
@@ -337,8 +345,8 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------- Logo 标记 ---------- */
-.nav-mark { width: 20px; height: 20px; display: block; flex: none; }
-.nav-brand { display: inline-flex; align-items: center; gap: 9px; }
+.nav-mark { width: 22px; height: 22px; display: block; flex: none; }
+.nav-brand { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
 .footer-mark { display: flex; align-items: center; gap: 9px; font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
 
 /* ---------- 语言切换 ---------- */
