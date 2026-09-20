@@ -327,3 +327,53 @@ a:hover { text-decoration: underline; }
   .rail { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- Logo 标记 ---------- */
+.nav-mark { width: 20px; height: 20px; display: block; flex: none; }
+.nav-brand { display: inline-flex; align-items: center; gap: 9px; }
+.footer-mark { display: flex; align-items: center; gap: 9px; font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+
+/* ---------- 语言切换 ---------- */
+.lang-switch { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; }
+.lang-switch a {
+  font-size: 12.5px; padding: 2px 6px; border-radius: 6px; color: var(--text-2);
+}
+.lang-switch a.on { color: var(--text); background: rgba(0,0,0,.06); font-weight: 600; }
+.lang-switch a:hover { text-decoration: none; color: var(--text); }
+
+/* ---------- <picture> 包装 ---------- */
+picture { display: block; }
+.rail-media picture { height: 100%; }
+.tile-media picture { height: 100%; }
+.hero-media picture { height: 100%; }
+.page-body picture { margin-bottom: 0; }
+
+/* ---------- 移动端常驻购买条 ---------- */
+.buybar { display: none; }
+
+@media (max-width: 768px) {
+  .buybar {
+    display: flex; align-items: center; gap: 12px;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .buybar-info { flex: 1; min-width: 0; }
+  .buybar-title {
+    display: block; font-size: 14px; font-weight: 600; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .buybar-price { display: block; font-size: 12.5px; color: var(--text-2); }
+  .buybar-actions { display: flex; align-items: center; gap: 10px; flex: none; }
+  .buybar-alt {
+    font-size: 14px; color: var(--text-2); padding: 8px 10px; border-radius: 980px;
+    border: 1px solid var(--line);
+  }
+  .buybar-alt:hover { text-decoration: none; color: var(--text); }
+  .buybar .btn { font-size: 15px; padding: 10px 18px; }
+  /* 给底部留出购买条的高度，避免遮挡页脚 */
+  body:has(.buybar) .footer-base { padding-bottom: 88px; }
+}

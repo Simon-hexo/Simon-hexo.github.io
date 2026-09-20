@@ -3,34 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  
   <title>TianFoto · 用胶片记录，用手作传递</title>
   
   <meta name="description" content="TianFoto，来自德国的胶片摄影与手作。全球联合版宝丽来台历、Final 100 倒计时日历、宝丽来手写信、每期投票的明信片盲盒。">
   
   <meta name="theme-color" content="#ffffff">
-  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href="https://www.tianfoto.comindex.html">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="TianFoto">
+  <meta property="og:title" content="TianFoto · 用胶片记录，用手作传递">
   <meta property="og:description" content="TianFoto，来自德国的胶片摄影与手作。全球联合版宝丽来台历、Final 100 倒计时日历、宝丽来手写信、每期投票的明信片盲盒。">
-  <meta property="og:image" content="https://www.tianfoto.com/img/index_cover1.jpg">
+  <meta property="og:image" content="https://www.tianfoto.com/img/og.jpg">
   <meta property="og:site_name" content="TianFoto">
+  <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="/css/tf.css">
+  
+  <link rel="preload" as="image" href="/img/index_cover1.jpg" fetchpriority="high">
+  
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
-<body>
+<body class="lang-zh">
   <a class="skip" href="#main">跳到主要内容</a>
 
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="nav-brand" href="/" aria-label="TianFoto 首页">TianFoto</a>
-      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <a class="nav-brand" href="/" aria-label="TianFoto">
+        <svg class="nav-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2.6" y="2.6" width="18.8" height="18.8" rx="4.4" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="6.6" y="6.6" width="10.8" height="9.4" rx="1.8" fill="currentColor"/>
+        </svg>
+        <span>TianFoto</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
       </button>
+
       <nav class="nav-links" id="navLinks">
         
           <a href="/Product/Calendar/">台历</a>
@@ -46,6 +59,12 @@
           <a href="/About/">关于</a>
         
           <a href="/Contact/">联系</a>
+        
+        
+        <span class="lang-switch">
+          <a href="/index.html" class="on">中文</a>
+          <a href="/en/index.html" class="">EN</a>
+        </span>
         
       </nav>
     </div>
@@ -64,11 +83,14 @@
     <a class="more" href="/About/">关于我<span aria-hidden="true">›</span></a>
   </div>
   <figure class="hero-media">
-    <img src="/img/index_cover1.jpg" alt="" width="2400" height="1329" fetchpriority="high" decoding="async">
+    <picture>
+      <source type="image/webp" srcset="/img/index_cover1.webp">
+      <img src="/img/index_cover1.jpg" alt="" width="2400" height="1329" fetchpriority="high" decoding="async">
+    </picture>
   </figure>
 </section>
 
-<!-- 正在进行：横向滑动栏目 -->
+<!-- 正在进行 / In progress：横向滑动栏目 -->
 <section class="section section-soft" id="activities">
   <div class="section-head">
     <h2>正在进行</h2>
@@ -76,71 +98,91 @@
   </div>
 
   <div class="rail-wrap">
-    <button class="rail-nav rail-prev" type="button" aria-label="上一组" data-rail="railActivities" data-dir="-1">‹</button>
-    <div class="rail" id="railActivities" tabindex="0" aria-label="活动，左右滑动查看">
+    <button class="rail-nav rail-prev" type="button" aria-label="Previous" data-rail="railActivities" data-dir="-1">‹</button>
+    <div class="rail" id="railActivities" tabindex="0" aria-label="正在进行">
       
         <article class="rail-card">
           <a class="rail-media" href="/Product/Calendar/" tabindex="-1" aria-hidden="true">
-            <img src="/img/calendar_cover.jpg" alt="" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="/img/calendar_cover.webp">
+              <img src="/img/calendar_cover.jpg" alt="" loading="lazy" decoding="async">
+            </picture>
           </a>
           <div class="rail-body">
             <p class="eyebrow">长期企划 · Super365</p>
             <h3>2026 全球联合版台历</h3>
             <p class="rail-text">全球宝丽来摄影师共同创作，公众票选入选作品。一天一幅 1:1 画幅，从 2026 元旦翻到跨年夜。</p>
-            <a class="more" href="/Product/Calendar/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Calendar/"
+               data-tf-event="learn_more" data-tf-label="2026 全球联合版台历">了解更多<span aria-hidden="true">›</span></a>
           </div>
         </article>
       
         <article class="rail-card">
           <a class="rail-media" href="/Product/Final100/" tabindex="-1" aria-hidden="true">
-            <img src="/img/final100_cover1.jpg" alt="" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="/img/final100_cover1.webp">
+              <img src="/img/final100_cover1.jpg" alt="" loading="lazy" decoding="async">
+            </picture>
           </a>
           <div class="rail-body">
             <p class="eyebrow">行动力 · Final100</p>
             <h3>让重要的事，持续发生</h3>
             <p class="rail-text">每天一张新风景，提醒你别忘了那件对自己重要的事。日拱一卒，不靠某一天的爆发。</p>
-            <a class="more" href="/Product/Final100/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Final100/"
+               data-tf-event="learn_more" data-tf-label="让重要的事，持续发生">了解更多<span aria-hidden="true">›</span></a>
           </div>
         </article>
       
         <article class="rail-card">
           <a class="rail-media" href="/Product/Letter/" tabindex="-1" aria-hidden="true">
-            <img src="/img/letter_2.jpg" alt="" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="/img/letter_2.webp">
+              <img src="/img/letter_2.jpg" alt="" loading="lazy" decoding="async">
+            </picture>
           </a>
           <div class="rail-body">
             <p class="eyebrow">来自德国 · 手写信</p>
             <h3>一张宝丽来，一封手写信</h3>
             <p class="rail-text">内容围绕你的分享而写，每一封都只属于一个人。纸与影一起，跨过时差抵达。</p>
-            <a class="more" href="/Product/Letter/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Letter/"
+               data-tf-event="learn_more" data-tf-label="一张宝丽来，一封手写信">了解更多<span aria-hidden="true">›</span></a>
           </div>
         </article>
       
         <article class="rail-card">
           <a class="rail-media" href="/Product/Postcard/" tabindex="-1" aria-hidden="true">
-            <img src="/img/postcard.JPG" alt="" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="/img/postcard.webp">
+              <img src="/img/postcard.JPG" alt="" loading="lazy" decoding="async">
+            </picture>
           </a>
           <div class="rail-body">
             <p class="eyebrow">每期投票 · 明信片盲盒</p>
             <h3>把选择权交给大家</h3>
             <p class="rail-text">每期由大家投票甄选入围作品，随机装盒。厚实硬卡纸，八张一盒，保留拆开的仪式感。</p>
-            <a class="more" href="/Product/Postcard/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Postcard/"
+               data-tf-event="learn_more" data-tf-label="把选择权交给大家">了解更多<span aria-hidden="true">›</span></a>
           </div>
         </article>
       
         <article class="rail-card">
           <a class="rail-media" href="/Activities/" tabindex="-1" aria-hidden="true">
-            <img src="/img/Polaroid.JPG" alt="" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="/img/Polaroid.webp">
+              <img src="/img/Polaroid.JPG" alt="" loading="lazy" decoding="async">
+            </picture>
           </a>
           <div class="rail-body">
             <p class="eyebrow">回顾 · Activities</p>
             <h3>往期活动一览</h3>
             <p class="rail-text">联合企划、摄影师专题、线下实践课 —— 做过的事，以及正在筹备的下一期。</p>
-            <a class="more" href="/Activities/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Activities/"
+               data-tf-event="learn_more" data-tf-label="往期活动一览">了解更多<span aria-hidden="true">›</span></a>
           </div>
         </article>
       
     </div>
-    <button class="rail-nav rail-next" type="button" aria-label="下一组" data-rail="railActivities" data-dir="1">›</button>
+    <button class="rail-nav rail-next" type="button" aria-label="Next" data-rail="railActivities" data-dir="1">›</button>
   </div>
   <p class="rail-hint">左右滑动查看更多 ›</p>
 </section>
@@ -158,14 +200,19 @@
           <h3>2026 全球联合版台历</h3>
           <p>365 天，每天一幅宝丽来。全球摄影师联合创作，公众票选入选。</p>
           <p class="tile-links">
-            <a class="more" href="/Product/Calendar/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Calendar/"
+               data-tf-event="learn_more" data-tf-label="2026 全球联合版台历">了解更多<span aria-hidden="true">›</span></a>
             
-              <a class="more" href="https://www.xiaohongshu.com/shop/68e3a51cf0e2710015034b62" target=&#34;_blank&#34; rel=&#34;noopener&#34;>选购<span aria-hidden="true">›</span></a>
+              <a class="more" href="https://www.xiaohongshu.com/shop/68e3a51cf0e2710015034b62" target="_blank" rel="noopener"
+                 data-tf-event="buy" data-tf-label="2026 全球联合版台历">选购<span aria-hidden="true">›</span></a>
             
           </p>
         </div>
         <a class="tile-media" href="/Product/Calendar/" tabindex="-1" aria-hidden="true">
-          <img src="/img/calendar_cover.jpg" alt="" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="/img/calendar_cover.webp">
+            <img src="/img/calendar_cover.jpg" alt="" loading="lazy" decoding="async">
+          </picture>
         </a>
       </article>
     
@@ -175,14 +222,19 @@
           <h3>Final 100</h3>
           <p>一本倒计时日历，用来每天提醒自己：那件重要的事，还可以再往前一点。</p>
           <p class="tile-links">
-            <a class="more" href="/Product/Final100/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Final100/"
+               data-tf-event="learn_more" data-tf-label="Final 100">了解更多<span aria-hidden="true">›</span></a>
             
-              <a class="more" href="https://xhslink.com/m/6WHC2XkPsxP" target=&#34;_blank&#34; rel=&#34;noopener&#34;>选购<span aria-hidden="true">›</span></a>
+              <a class="more" href="https://xhslink.com/m/6WHC2XkPsxP" target="_blank" rel="noopener"
+                 data-tf-event="buy" data-tf-label="Final 100">选购<span aria-hidden="true">›</span></a>
             
           </p>
         </div>
         <a class="tile-media" href="/Product/Final100/" tabindex="-1" aria-hidden="true">
-          <img src="/img/final100_cover1.jpg" alt="" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="/img/final100_cover1.webp">
+            <img src="/img/final100_cover1.jpg" alt="" loading="lazy" decoding="async">
+          </picture>
         </a>
       </article>
     
@@ -192,14 +244,19 @@
           <h3>宝丽来手写信</h3>
           <p>一张宝丽来照片，一封手写信，可能还有随机掉落的小礼物。</p>
           <p class="tile-links">
-            <a class="more" href="/Product/Letter/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Letter/"
+               data-tf-event="learn_more" data-tf-label="宝丽来手写信">了解更多<span aria-hidden="true">›</span></a>
             
-              <a class="more" href="/img/wechat4.jpg" target=&#34;_blank&#34;>咨询<span aria-hidden="true">›</span></a>
+              <a class="more" href="/img/wechat4.jpg" target="_blank" rel="noopener"
+                 data-tf-event="buy" data-tf-label="宝丽来手写信">咨询<span aria-hidden="true">›</span></a>
             
           </p>
         </div>
         <a class="tile-media" href="/Product/Letter/" tabindex="-1" aria-hidden="true">
-          <img src="/img/letter_0.jpg" alt="" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="/img/letter_0.webp">
+            <img src="/img/letter_0.jpg" alt="" loading="lazy" decoding="async">
+          </picture>
         </a>
       </article>
     
@@ -209,14 +266,19 @@
           <h3>宝丽来明信片盲盒</h3>
           <p>从票选作品中随机甄选八张，装进一盒，保留选择的惊喜。</p>
           <p class="tile-links">
-            <a class="more" href="/Product/Postcard/">了解更多<span aria-hidden="true">›</span></a>
+            <a class="more" href="/Product/Postcard/"
+               data-tf-event="learn_more" data-tf-label="宝丽来明信片盲盒">了解更多<span aria-hidden="true">›</span></a>
             
-              <a class="more" href="https://xhslink.com/m/43AOjWaNhpc" target=&#34;_blank&#34; rel=&#34;noopener&#34;>购买<span aria-hidden="true">›</span></a>
+              <a class="more" href="https://xhslink.com/m/43AOjWaNhpc" target="_blank" rel="noopener"
+                 data-tf-event="buy" data-tf-label="宝丽来明信片盲盒">购买<span aria-hidden="true">›</span></a>
             
           </p>
         </div>
         <a class="tile-media" href="/Product/Postcard/" tabindex="-1" aria-hidden="true">
-          <img src="/img/postcard2.JPG" alt="" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="/img/postcard2.webp">
+            <img src="/img/postcard2.JPG" alt="" loading="lazy" decoding="async">
+          </picture>
         </a>
       </article>
     
@@ -225,8 +287,7 @@
 
 <!-- 品牌声明 -->
 <section class="section section-dark statement">
-  <p class="statement-text">我们相信，真正留下来的不是照片，<br>是照片背后那段时间。
-</p>
+  <p class="statement-text">我们相信，真正留下来的不是照片，<br>是照片背后那段时间。</p>
   <a class="more more-light" href="/About/">关于 TianFoto<span aria-hidden="true">›</span></a>
 </section>
 
@@ -247,16 +308,27 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-mark">TianFoto</div>
+        <div class="footer-mark">
+          <svg class="nav-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.6" y="2.6" width="18.8" height="18.8" rx="4.4" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="6.6" y="6.6" width="10.8" height="9.4" rx="1.8" fill="currentColor"/>
+          </svg>
+          <span>TianFoto</span>
+        </div>
         <p>台历 · 手写信 · 明信片</p>
       </div>
       <div class="footer-cols">
         <div>
           <h4>产品</h4>
-          <a href="/Product/Calendar/">2026 联合台历</a>
-          <a href="/Product/Final100/">Final 100</a>
-          <a href="/Product/Letter/">宝丽来手写信</a>
-          <a href="/Product/Postcard/">明信片盲盒</a>
+          
+            <a href="/Product/Calendar/">台历</a>
+          
+            <a href="/Product/Final100/">Final100</a>
+          
+            <a href="/Product/Letter/">手写信</a>
+          
+            <a href="/Product/Postcard/">明信片</a>
+          
         </div>
         <div>
           <h4>了解</h4>
@@ -268,8 +340,8 @@
         <div>
           <h4>联络</h4>
           <a href="mailto:tian.fotografie@gmail.com">邮件</a>
-          <a href="https://xhslink.com/m/dRA1yxEbJD" target="_blank" rel="noopener">小红书</a>
-          <a href="/img/wechat4.jpg" target="_blank" rel="noopener">微信</a>
+          <a href="https://xhslink.com/m/dRA1yxEbJD" target="_blank" rel="noopener" data-tf-event="outbound" data-tf-label="xiaohongshu-footer">小红书</a>
+          <a href="/img/wechat4.jpg" target="_blank" rel="noopener" data-tf-event="consult" data-tf-label="wechat-footer">微信</a>
           <a href="/Contact/">投稿与合作</a>
         </div>
       </div>
@@ -279,6 +351,8 @@
       <span><a href="mailto:tian.fotografie@gmail.com">tian.fotografie@gmail.com</a></span>
     </div>
   </footer>
+
+  
 
   <script src="/js/tf.js" defer></script>
 </body>

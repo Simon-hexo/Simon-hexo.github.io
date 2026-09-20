@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  // 移动端导航
+  /* ---------- 移动端导航 ---------- */
   var toggle = document.getElementById('navToggle');
   var links = document.getElementById('navLinks');
   if (toggle && links) {
@@ -17,7 +17,7 @@
     });
   }
 
-  // 横向滑动栏目：左右箭头
+  /* ---------- 横向滑动栏目 ---------- */
   document.querySelectorAll('.rail-nav').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var rail = document.getElementById(btn.getAttribute('data-rail'));
@@ -28,7 +28,6 @@
     });
   });
 
-  // 到达两端时置灰箭头
   document.querySelectorAll('.rail').forEach(function (rail) {
     var wrap = rail.closest('.rail-wrap');
     if (!wrap) return;
@@ -42,5 +41,26 @@
     rail.addEventListener('scroll', sync, { passive: true });
     window.addEventListener('resize', sync);
     sync();
+  });
+
+  /* ---------- 转化事件：点击购买 / 咨询 / 了解更多 ----------
+     统计口径：
+       1. 页面浏览 —— 由 Cloudflare Web Analytics 自动收集（边缘注入，无需代码）
+       2. 点击转化 —— 走 GA4。主题配置里填上 ga4: G-XXXXXXX 即自动生效
+     未配置 GA4 时这里静默跳过，不影响任何功能。
+  */
+  var hasGA = typeof window.gtag === 'function';
+  document.querySelectorAll('[data-tf-event]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var name = el.getAttribute('data-tf-event');
+      var label = el.getAttribute('data-tf-label') || '';
+      if (hasGA) {
+        window.gtag('event', name, {
+          event_category: 'engagement',
+          event_label: label,
+          link_url: el.getAttribute('href') || ''
+        });
+      }
+    });
   });
 })();
