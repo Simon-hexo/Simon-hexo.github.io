@@ -1,377 +1,285 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>胶片摄影与手作 | TianFoto</title><meta name="author" content="Simon"><meta name="copyright" content="Simon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="TianFoto 的胶片摄影与手作小店：2026 全球联合宝丽来台历、宝丽来手写信、印刷版明信片盲盒——用胶片记录，用手作传递。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胶片摄影与手作">
-<meta property="og:url" content="https://www.tianfoto.com/index.html">
-<meta property="og:site_name" content="TianFoto">
-<meta property="og:description" content="TianFoto 的胶片摄影与手作小店：2026 全球联合宝丽来台历、宝丽来手写信、印刷版明信片盲盒——用胶片记录，用手作传递。">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.tianfoto.com/img/index_cover1.jpg">
-<meta property="article:published_time" content="2026-01-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-09-19T06:32:36.341Z">
-<meta property="article:author" content="Simon">
-<meta property="article:tag" content="宝丽来,胶片摄影,明信片盲盒,手写信,台历,TianFoto">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.tianfoto.com/img/index_cover1.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.tianfoto.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        if (!ttl) return
-        const expiry = Date.now() + ttl * 86400000
-        localStorage.setItem(key, JSON.stringify({ value, expiry }))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return undefined
-        const { value, expiry } = JSON.parse(itemStr)
-        if (Date.now() > expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return value
-      }
-    }
-
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
-        script.onload = script.onreadystatechange = () => {
-          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
-        }
-        script.onerror = reject
-        document.head.appendChild(script)
-      }),
-      getCSS: (url, id) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onload = link.onreadystatechange = () => {
-          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
-        }
-        link.onerror = reject
-        document.head.appendChild(link)
-      }),
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   
-      
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
+  <title>TianFoto · 用胶片记录，用手作传递</title>
+  
+  <meta name="description" content="TianFoto，来自德国的胶片摄影与手作。全球联合版宝丽来台历、Final 100 倒计时日历、宝丽来手写信、每期投票的明信片盲盒。">
+  
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="canonical" href="https://www.tianfoto.comindex.html">
 
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TianFoto">
+  <meta property="og:description" content="TianFoto，来自德国的胶片摄影与手作。全球联合版宝丽来台历、Final 100 倒计时日历、宝丽来手写信、每期投票的明信片盲盒。">
+  <meta property="og:image" content="https://www.tianfoto.com/img/index_cover1.jpg">
+  <meta property="og:site_name" content="TianFoto">
+  <meta name="twitter:card" content="summary_large_image">
 
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+  <link rel="stylesheet" href="/css/tf.css">
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/" aria-label="TianFoto 首页">TianFoto</a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
         
+          <a href="/Product/Calendar/">台历</a>
+        
+          <a href="/Product/Final100/">Final100</a>
+        
+          <a href="/Product/Letter/">手写信</a>
+        
+          <a href="/Product/Postcard/">明信片</a>
+        
+          <a href="/Activities/">活动</a>
+        
+          <a href="/About/">关于</a>
+        
+          <a href="/Contact/">联系</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    
+
+<!-- Hero -->
+<section class="hero">
+  <p class="eyebrow">TianFoto</p>
+  <h1 class="hero-title">把时间，<br>做成可以握在手里的东西。</h1>
+  <p class="hero-text">台历 · 手写信 · 明信片。来自德国，寄往世界各地。</p>
+  <div class="hero-actions">
+    <a class="btn" href="#products">看看产品</a>
+    <a class="more" href="/About/">关于我<span aria-hidden="true">›</span></a>
+  </div>
+  <figure class="hero-media">
+    <img src="/img/index_cover1.jpg" alt="" width="2400" height="1329" fetchpriority="high" decoding="async">
+  </figure>
+</section>
+
+<!-- 正在进行：横向滑动栏目 -->
+<section class="section section-soft" id="activities">
+  <div class="section-head">
+    <h2>正在进行</h2>
+    <p>每一期都是一次共同的记录。左右滑动，看看最近在做什么。</p>
+  </div>
+
+  <div class="rail-wrap">
+    <button class="rail-nav rail-prev" type="button" aria-label="上一组" data-rail="railActivities" data-dir="-1">‹</button>
+    <div class="rail" id="railActivities" tabindex="0" aria-label="活动，左右滑动查看">
       
+        <article class="rail-card">
+          <a class="rail-media" href="/Product/Calendar/" tabindex="-1" aria-hidden="true">
+            <img src="/img/calendar_cover.jpg" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="rail-body">
+            <p class="eyebrow">长期企划 · Super365</p>
+            <h3>2026 全球联合版台历</h3>
+            <p class="rail-text">全球宝丽来摄影师共同创作，公众票选入选作品。一天一幅 1:1 画幅，从 2026 元旦翻到跨年夜。</p>
+            <a class="more" href="/Product/Calendar/">了解更多<span aria-hidden="true">›</span></a>
+          </div>
+        </article>
       
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-  
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: '复制成功',
-    error: '复制失败',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: {"limitCount":150,"languages":{"author":"作者: Simon","link":"链接: ","source":"来源: TianFoto","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '胶片摄影与手作',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'page'
-}</script><style>img{height:auto}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TianFoto","alternateName":"TianFoto 胶片摄影与手作","url":"https://www.tianfoto.com/","logo":"https://www.tianfoto.com/img/favicon.png","description":"胶片摄影与手作：宝丽来明信片盲盒、宝丽来手写信、全球联合台历。"}</script><style>#page-header.full_page{background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;background-color:#ffffff;}@media(max-width:768px){#page-header.full_page{background-size:cover!important;}}</style><style>@media(min-width:769px){#page-header.full_page{background-image:url('/img/index_cover.jpg')!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;}}@media(max-width:768px){#page-header.full_page{background-image:url('/img/index_cover1.jpg')!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;}}</style><style>
-  /* 桌面端也显示首页社交图标 */
-  #page-header #site_social_icons {
-    display: block !important;
-  }
-</style>
-<style>
-  @media (min-width: 769px) {
-    #page-header #site_social_icons .social-icon {
-      font-size: 2.2em !important;
-      margin: 0 12px;
-    }
-  }
-  @media (max-width: 768px) {
-    #page-header #site_social_icons .social-icon {
-      font-size: 1.8em !important;
-      margin: 0 10px;
-    }
-  }
-</style>
-
-<style>
-  /* 1. 重置首页默认边距，让产品区块全屏 */
-  .page-content {
-    padding: 0 !important;  /* 取消页面内边距 */
-    margin: 0 !important;
-  }
-  .container {
-    max-width: 100% !important;  /* 容器全屏，无宽度限制 */
-    padding: 0 !important;
-  }
-  
-  /* 2. 产品区块样式：每个产品占满一屏（可选，也可按图片高度自适应） */
-  .product-section {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;  /* 用于按钮定位 */
-  }
-  
-  /* 3. 产品图片：响应式，避免变形 */
-  .product-img {
-    width: 100%;
-    height: auto;  /* 保持图片比例 */
-    display: block;
-  }
-  
-  /* 4. 产品文字与按钮：居中显示（可调整为左/右对齐） */
-  .product-info {
-    position: absolute;  /* 按钮悬浮在图片上（Apple常用风格） */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);  /* 绝对居中 */
-    text-align: center;
-  }
-  
-  /* 5. 产品标题：简洁白色（若图片浅色，可改为黑色） */
-  .product-title {
-    font-size: 2.5rem;  /* 标题大小，可调整 */
-    color: #fff;  /* 白色文字（适合深色图片），浅色图片改#000 */
-    margin-bottom: 20px;
-    font-weight: normal;  /* Apple标题无粗体 */
-  }
-  
-  /* 6. 按钮样式：圆角、简洁配色 */
-  .product-buttons {
-    display: flex;
-    gap: 20px;  /* 按钮间距 */
-    justify-content: center;
-  }
-  .product-btn {
-    padding: 12px 24px;  /* 按钮内边距 */
-    border-radius: 30px;  /* 圆角（Apple风格） */
-    font-size: 1rem;
-    text-decoration: none;  /* 取消下划线 */
-    transition: background-color 0.3s;  /*  hover过渡效果 */
-  }
-  /* 了解详情按钮：白色背景+黑色文字（可调整） */
-  .detail-btn {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #fff;
-  }
-  .detail-btn:hover {
-    background-color: rgba(255,255,255,0.8);  /* hover透明效果 */
-  }
-  /* 咨询按钮：黑色背景+白色文字（对比色） */
-  .contact-btn {
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #000;
-  }
-  .contact-btn:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* 7. 移动端适配：调整标题和按钮大小 */
-  @media (max-width: 768px) {
-    .product-title {
-      font-size: 1.8rem;
-    }
-    .product-btn {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-    }
-    .product-buttons {
-      gap: 15px;
-    }
-  }
-</style>
-<meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/rock.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-images"></i><span> 作品</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/Portrait/"><i class="fa-fw fas fa-camera"></i><span> 人像</span></a></li><li><a class="site-page child" href="/Gallery/Landscape/"><i class="fa-fw fas fa-camera"></i><span> 风景</span></a></li><li><a class="site-page child" href="/Gallery/Polaroid/"><i class="fa-fw fas fa-camera"></i><span> 宝丽来</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-tags"></i><span> 猜你想了解</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Product/Calendar/"><i class="fa-fw fas fa-calendar"></i><span> 超越365台历</span></a></li><li><a class="site-page child" href="/Product/Final100/"><i class="fa-fw fas fa-calendar"></i><span> Final100</span></a></li><li><a class="site-page child" href="/Product/Letter/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来手写信</span></a></li><li><a class="site-page child" href="/Product/Postcard/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来明信片盲盒</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-vote-yea"></i><span> 投票</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/vote/"><i class="fa-fw fas fa-calendar-check"></i><span> 2026.03期</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Contact/"><i class="fa-fw fas fa-envelope"></i><span> 联系</span></a></div><div class="menus_item"><a class="site-page" href="/About/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-images"></i><span> 作品</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/Portrait/"><i class="fa-fw fas fa-camera"></i><span> 人像</span></a></li><li><a class="site-page child" href="/Gallery/Landscape/"><i class="fa-fw fas fa-camera"></i><span> 风景</span></a></li><li><a class="site-page child" href="/Gallery/Polaroid/"><i class="fa-fw fas fa-camera"></i><span> 宝丽来</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-tags"></i><span> 猜你想了解</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Product/Calendar/"><i class="fa-fw fas fa-calendar"></i><span> 超越365台历</span></a></li><li><a class="site-page child" href="/Product/Final100/"><i class="fa-fw fas fa-calendar"></i><span> Final100</span></a></li><li><a class="site-page child" href="/Product/Letter/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来手写信</span></a></li><li><a class="site-page child" href="/Product/Postcard/"><i class="fa-fw fas fa-sticky-note"></i><span> 宝丽来明信片盲盒</span></a></li></ul></div><div class="menus_item"><span class="site-page group hide"><i class="fa-fw fas fa-vote-yea"></i><span> 投票</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/vote/"><i class="fa-fw fas fa-calendar-check"></i><span> 2026.03期</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/Contact/"><i class="fa-fw fas fa-envelope"></i><span> 联系</span></a></div><div class="menus_item"><a class="site-page" href="/About/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">胶片摄影与手作</h1></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="page-title">胶片摄影与手作</div><div class="container" id="article-container"><section class="product-section">
-  <div class="product-container">
-    <img src="/img/calendar_cover.jpg" alt="超越365台历" class="product-img" fetchpriority="high" decoding="async" width="1400" height="709">
-    <div class="product-info">
-      <h2 class="product-title">超越365台历</h2>
-      <div class="product-buttons">
-        <a target="_blank" rel="noopener" href="https://tianfoto.com/Product/Calendar/" class="product-btn detail-btn">了解详情</a>
-        <a href="/img/wechat4.jpg" class="product-btn contact-btn" target="_blank">咨询</a>
-      </div>
+        <article class="rail-card">
+          <a class="rail-media" href="/Product/Final100/" tabindex="-1" aria-hidden="true">
+            <img src="/img/final100_cover1.jpg" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="rail-body">
+            <p class="eyebrow">行动力 · Final100</p>
+            <h3>让重要的事，持续发生</h3>
+            <p class="rail-text">每天一张新风景，提醒你别忘了那件对自己重要的事。日拱一卒，不靠某一天的爆发。</p>
+            <a class="more" href="/Product/Final100/">了解更多<span aria-hidden="true">›</span></a>
+          </div>
+        </article>
+      
+        <article class="rail-card">
+          <a class="rail-media" href="/Product/Letter/" tabindex="-1" aria-hidden="true">
+            <img src="/img/letter_2.jpg" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="rail-body">
+            <p class="eyebrow">来自德国 · 手写信</p>
+            <h3>一张宝丽来，一封手写信</h3>
+            <p class="rail-text">内容围绕你的分享而写，每一封都只属于一个人。纸与影一起，跨过时差抵达。</p>
+            <a class="more" href="/Product/Letter/">了解更多<span aria-hidden="true">›</span></a>
+          </div>
+        </article>
+      
+        <article class="rail-card">
+          <a class="rail-media" href="/Product/Postcard/" tabindex="-1" aria-hidden="true">
+            <img src="/img/postcard.JPG" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="rail-body">
+            <p class="eyebrow">每期投票 · 明信片盲盒</p>
+            <h3>把选择权交给大家</h3>
+            <p class="rail-text">每期由大家投票甄选入围作品，随机装盒。厚实硬卡纸，八张一盒，保留拆开的仪式感。</p>
+            <a class="more" href="/Product/Postcard/">了解更多<span aria-hidden="true">›</span></a>
+          </div>
+        </article>
+      
+        <article class="rail-card">
+          <a class="rail-media" href="/Activities/" tabindex="-1" aria-hidden="true">
+            <img src="/img/Polaroid.JPG" alt="" loading="lazy" decoding="async">
+          </a>
+          <div class="rail-body">
+            <p class="eyebrow">回顾 · Activities</p>
+            <h3>往期活动一览</h3>
+            <p class="rail-text">联合企划、摄影师专题、线下实践课 —— 做过的事，以及正在筹备的下一期。</p>
+            <a class="more" href="/Activities/">了解更多<span aria-hidden="true">›</span></a>
+          </div>
+        </article>
+      
     </div>
+    <button class="rail-nav rail-next" type="button" aria-label="下一组" data-rail="railActivities" data-dir="1">›</button>
+  </div>
+  <p class="rail-hint">左右滑动查看更多 ›</p>
+</section>
+
+<!-- 产品宫格 -->
+<section class="section" id="products">
+  <div class="section-head">
+    <h2>可以带回家的东西</h2>
+  </div>
+  <div class="tiles">
+    
+      <article class="tile">
+        <div class="tile-copy">
+          <p class="eyebrow">Super365</p>
+          <h3>2026 全球联合版台历</h3>
+          <p>365 天，每天一幅宝丽来。全球摄影师联合创作，公众票选入选。</p>
+          <p class="tile-links">
+            <a class="more" href="/Product/Calendar/">了解更多<span aria-hidden="true">›</span></a>
+            
+              <a class="more" href="https://www.xiaohongshu.com/shop/68e3a51cf0e2710015034b62" target=&#34;_blank&#34; rel=&#34;noopener&#34;>选购<span aria-hidden="true">›</span></a>
+            
+          </p>
+        </div>
+        <a class="tile-media" href="/Product/Calendar/" tabindex="-1" aria-hidden="true">
+          <img src="/img/calendar_cover.jpg" alt="" loading="lazy" decoding="async">
+        </a>
+      </article>
+    
+      <article class="tile">
+        <div class="tile-copy">
+          <p class="eyebrow">行动力</p>
+          <h3>Final 100</h3>
+          <p>一本倒计时日历，用来每天提醒自己：那件重要的事，还可以再往前一点。</p>
+          <p class="tile-links">
+            <a class="more" href="/Product/Final100/">了解更多<span aria-hidden="true">›</span></a>
+            
+              <a class="more" href="https://xhslink.com/m/6WHC2XkPsxP" target=&#34;_blank&#34; rel=&#34;noopener&#34;>选购<span aria-hidden="true">›</span></a>
+            
+          </p>
+        </div>
+        <a class="tile-media" href="/Product/Final100/" tabindex="-1" aria-hidden="true">
+          <img src="/img/final100_cover1.jpg" alt="" loading="lazy" decoding="async">
+        </a>
+      </article>
+    
+      <article class="tile">
+        <div class="tile-copy">
+          <p class="eyebrow">A Letter From Tian</p>
+          <h3>宝丽来手写信</h3>
+          <p>一张宝丽来照片，一封手写信，可能还有随机掉落的小礼物。</p>
+          <p class="tile-links">
+            <a class="more" href="/Product/Letter/">了解更多<span aria-hidden="true">›</span></a>
+            
+              <a class="more" href="/img/wechat4.jpg" target=&#34;_blank&#34;>咨询<span aria-hidden="true">›</span></a>
+            
+          </p>
+        </div>
+        <a class="tile-media" href="/Product/Letter/" tabindex="-1" aria-hidden="true">
+          <img src="/img/letter_0.jpg" alt="" loading="lazy" decoding="async">
+        </a>
+      </article>
+    
+      <article class="tile">
+        <div class="tile-copy">
+          <p class="eyebrow">每期投票</p>
+          <h3>宝丽来明信片盲盒</h3>
+          <p>从票选作品中随机甄选八张，装进一盒，保留选择的惊喜。</p>
+          <p class="tile-links">
+            <a class="more" href="/Product/Postcard/">了解更多<span aria-hidden="true">›</span></a>
+            
+              <a class="more" href="https://xhslink.com/m/43AOjWaNhpc" target=&#34;_blank&#34; rel=&#34;noopener&#34;>购买<span aria-hidden="true">›</span></a>
+            
+          </p>
+        </div>
+        <a class="tile-media" href="/Product/Postcard/" tabindex="-1" aria-hidden="true">
+          <img src="/img/postcard2.JPG" alt="" loading="lazy" decoding="async">
+        </a>
+      </article>
+    
   </div>
 </section>
 
-<section class="product-section">
-  <div class="product-container">
-    <img src="/img/final100_cover1.jpg" alt="Final 100" class="product-img" loading="lazy" decoding="async" width="1400" height="1867">
-    <div class="product-info">
-      <h2 class="product-title">Final 100</h2>
-      <div class="product-buttons">
-        <a target="_blank" rel="noopener" href="https://tianfoto.com/Product/Final100/" class="product-btn detail-btn">了解详情</a>
-        <a href="/img/wechat4.jpg" class="product-btn contact-btn" target="_blank">咨询</a>
-      </div>
-    </div>
+<!-- 品牌声明 -->
+<section class="section section-dark statement">
+  <p class="statement-text">我们相信，真正留下来的不是照片，<br>是照片背后那段时间。
+</p>
+  <a class="more more-light" href="/About/">关于 TianFoto<span aria-hidden="true">›</span></a>
+</section>
+
+<!-- 投稿 -->
+<section class="section" id="submit">
+  <div class="section-head">
+    <h2>把故事交给我</h2>
+    <p>欢迎投稿、合作与被拍摄。你的作品若被选中，我们会致以感谢并提供稿酬。</p>
+  </div>
+  <div class="submit-row">
+    <a class="btn" href="/Contact/">投稿与合作</a>
+    <a class="more" href="mailto:tian.fotografie@gmail.com">tian.fotografie@gmail.com<span aria-hidden="true">›</span></a>
   </div>
 </section>
 
-<section class="product-section">
-  <div class="product-container">
-    <img src="/img/letter_0.jpg" alt="宝丽来手写信" class="product-img" loading="lazy" decoding="async" width="1036" height="1382">
-    <div class="product-info">
-      <h2 class="product-title">宝丽来手写信</h2>
-      <div class="product-buttons">
-        <a href="/Product/Letter/" class="product-btn detail-btn">了解详情</a>
-        <a href="/img/wechat4.jpg" class="product-btn contact-btn" target="_blank">咨询</a>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-mark">TianFoto</div>
+        <p>台历 · 手写信 · 明信片</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>产品</h4>
+          <a href="/Product/Calendar/">2026 联合台历</a>
+          <a href="/Product/Final100/">Final 100</a>
+          <a href="/Product/Letter/">宝丽来手写信</a>
+          <a href="/Product/Postcard/">明信片盲盒</a>
+        </div>
+        <div>
+          <h4>了解</h4>
+          <a href="/Activities/">活动一览</a>
+          <a href="/Gallery/">作品</a>
+          <a href="/About/">关于我</a>
+          <a href="/blog/">手记</a>
+        </div>
+        <div>
+          <h4>联络</h4>
+          <a href="mailto:tian.fotografie@gmail.com">邮件</a>
+          <a href="https://xhslink.com/m/dRA1yxEbJD" target="_blank" rel="noopener">小红书</a>
+          <a href="/img/wechat4.jpg" target="_blank" rel="noopener">微信</a>
+          <a href="/Contact/">投稿与合作</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="product-section">
-  <div class="product-container">
-    <img src="/img/postcard.JPG" alt="宝丽来明信片盲盒" class="product-img" loading="lazy" decoding="async" width="1400" height="788">
-    <div class="product-info">
-      <h2 class="product-title">宝丽来明信片盲盒</h2>
-      <div class="product-buttons">
-        <a target="_blank" rel="noopener" href="https://xhslink.com/m/349MqjDpw71" class="product-btn detail-btn">跳转店铺</a>
-        <a href="/img/wechat4.jpg" class="product-btn contact-btn" target="_blank">咨询</a>
-      </div>
+    <div class="footer-base">
+      <span>© 2026 TianFoto · 用胶片记录，用手作传递</span>
+      <span><a href="mailto:tian.fotografie@gmail.com">tian.fotografie@gmail.com</a></span>
     </div>
-  </div>
-</section>
+  </footer>
 
-<style>
-/* ================= 电脑端（保持不变） ================= */
-.product-section { margin-bottom: 24px; }
-
-.product-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.product-img {
-  width: 100%;
-  height: 520px; 
-  object-fit: cover; 
-  display: block;
-  margin: 0 !important; 
-  border-radius: 16px;
-}
-
-.product-info {
-  position: absolute;
-  left: 50%;
-  top: 68%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  width: 90%;
-  max-width: 980px;
-  padding: 20px;
-}
-
-.product-info * { text-shadow: 0 2px 8px rgba(0,0,0,0.35); }
-.product-title { font-size: 2.4rem; font-weight: 700; margin-bottom: 14px; letter-spacing: .5px; }
-.product-buttons { display: inline-flex; gap: 14px; margin-top: 8px; }
-.product-btn { 
-  display: inline-block; 
-  padding: .8rem 1.6rem; 
-  border-radius: 50px; 
-  font-weight: 600; 
-  font-size: 1.02rem; 
-  text-decoration: none; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12); 
-  transition: all .2s ease;
-}
-
-.detail-btn { background: linear-gradient(90deg,#4a7dbe,#6daedb); color: #fff; }
-.detail-btn:hover { background: linear-gradient(90deg,#3e6bab,#5fa0c8); transform: translateY(-2px); }
-.contact-btn { background: #111; color: #fff; }
-.contact-btn:hover { background: #000; transform: translateY(-2px); }
-
-/* ================= 平板端适配 ================= */
-@media (max-width: 768px) {
-  .product-section { margin-bottom: 16px; } /* 缩小模块间距 */
-  .product-img { height: 260px; } /* 大幅压扁高度 */
-  .product-info { top: 50%; padding: 10px; } /* 文字居中对齐 */
-  .product-title { font-size: 1.6rem; margin-bottom: 10px; }
-  .product-buttons { gap: 10px; }
-  .product-btn { font-size: .9rem; padding: .5rem 1rem; border-radius: 44px; }
-}
-
-/* ================= 手机端适配 ================= */
-@media (max-width: 480px) {
-  .product-section { margin-bottom: 12px; } /* 模块紧凑排列，省出更多屏幕空间 */
-  .product-img { height: 200px; } /* 高度缩短至200px，一屏可以显示多个产品 */
-  .product-info { top: 50%; width: 95%; max-width: 720px; padding: 10px; }
-  .product-title { font-size: 1.25rem; letter-spacing: 0; margin-bottom: 8px; }
-  .product-buttons { gap: 8px; }
-  .product-btn { min-width: 85px; font-size: .8rem; padding: .4rem .7rem; }
-}
-</style>
-</div></div></main><footer id="footer" style="background: white;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Simon</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
+  <script src="/js/tf.js" defer></script>
+</body>
+</html>
