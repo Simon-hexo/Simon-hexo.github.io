@@ -2,27 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tianfoto.com/Activities/</loc>
+    <loc>https://tianfoto.com/en/Product/Final100/</loc>
     
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/en/Activities/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://tianfoto.com/About/</loc>
+    <loc>https://tianfoto.com/Product/Final100/</loc>
     
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/en/Product/Calendar/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Product/Calendar/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +40,106 @@
   <url>
     <loc>https://tianfoto.com/en/About/</loc>
     
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/en/Product/Letter/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/en/Product/Postcard/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Product/Letter/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/About/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Product/Postcard/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/en/Activities/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Activities/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Gallery/Polaroid/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Gallery/Landscape/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Gallery/Portrait/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Gallery/</loc>
+    
+    <lastmod>2026-09-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -56,78 +164,6 @@
   </url>
   
   <url>
-    <loc>https://tianfoto.com/en/Product/Letter/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/en/Product/Postcard/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/en/Product/Final100/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Product/Calendar/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Product/Postcard/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Product/Final100/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Product/Letter/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/en/Product/Calendar/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tianfoto.com/en/Contact/</loc>
     
     <lastmod>2026-09-20</lastmod>
@@ -138,42 +174,6 @@
   
   <url>
     <loc>https://tianfoto.com/404.html</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Gallery/Polaroid/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Gallery/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Gallery/Portrait/</loc>
-    
-    <lastmod>2026-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Gallery/Landscape/</loc>
     
     <lastmod>2026-09-20</lastmod>
     
@@ -211,7 +211,7 @@
 
   <url>
     <loc>https://tianfoto.com/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
