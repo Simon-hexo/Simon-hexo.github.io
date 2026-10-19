@@ -22,7 +22,7 @@
     btn.addEventListener('click', function () {
       var rail = document.getElementById(btn.getAttribute('data-rail'));
       if (!rail) return;
-      var card = rail.querySelector('.rail-card');
+      var card = rail.querySelector('.rail-card, .promo-card');
       var step = card ? card.getBoundingClientRect().width + 20 : rail.clientWidth * 0.8;
       rail.scrollBy({ left: step * parseInt(btn.getAttribute('data-dir'), 10), behavior: 'smooth' });
     });
