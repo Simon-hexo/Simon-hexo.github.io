@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tianfoto.com/en/Activities/Final100-100days/</loc>
+    
+    <lastmod>2026-10-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tianfoto.com/Activities/Final100-100days/</loc>
+    
+    <lastmod>2026-10-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tianfoto.com/en/Activities/Vol-0456/</loc>
     
     <lastmod>2026-10-19</lastmod>
@@ -20,25 +38,7 @@
   </url>
   
   <url>
-    <loc>https://tianfoto.com/en/Activities/Final100-100days/</loc>
-    
-    <lastmod>2026-10-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tianfoto.com/Activities/</loc>
-    
-    <lastmod>2026-10-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tianfoto.com/Activities/Final100-100days/</loc>
     
     <lastmod>2026-10-19</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://tianfoto.com/en/Product/Letter/</loc>
+    <loc>https://tianfoto.com/en/Product/Postcard/</loc>
     
     <lastmod>2026-09-26</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://tianfoto.com/en/Product/Postcard/</loc>
+    <loc>https://tianfoto.com/en/Product/Letter/</loc>
     
     <lastmod>2026-09-26</lastmod>
     
