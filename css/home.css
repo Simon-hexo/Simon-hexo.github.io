@@ -4,6 +4,7 @@
 
 /* ---------- 活动横滑栏（图 4 风格） ---------- */
 .activity-rail {
+  --rail-card: min(76vw, 400px);
   background: #fff;
   border-radius: 18px;
   padding: 26px 0 18px;
@@ -18,7 +19,7 @@
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 4px calc((100% - min(76vw, 400px)) / 2) 14px;
+  padding: 4px calc((100% - var(--rail-card)) / 2) 14px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -27,7 +28,7 @@
 
 .activity-card {
   flex: 0 0 auto;
-  width: min(76vw, 400px);
+  width: var(--rail-card);
   scroll-snap-align: center;
   display: block;
   border-radius: 16px;
@@ -143,7 +144,7 @@
 
 /* ---------- 移动端 ---------- */
 @media (max-width: 768px) {
-  .activity-rail { border-radius: 14px; padding: 18px 0 14px; }
+  .activity-rail { --rail-card: min(66vw, 260px); border-radius: 14px; padding: 12px 0 10px; }
   .activity-card { border-radius: 14px; }
 
   .product-block { border-radius: 14px; }
