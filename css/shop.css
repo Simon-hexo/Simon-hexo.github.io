@@ -1,0 +1,158 @@
+/* Shared purchase actions and purchase-method page */
+#page .shop-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0 30px;
+}
+
+#page .shop-action {
+  display: inline-flex;
+  min-width: 132px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border: 1.5px solid #0071e3;
+  border-radius: 980px;
+  font-size: 0.96rem;
+  font-weight: 650;
+  line-height: 1.25;
+  text-decoration: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#page .shop-action--buy {
+  color: #fff !important;
+  background: #0071e3;
+}
+
+#page .shop-action--buy:hover {
+  background: #0077ed;
+}
+
+#page .shop-action--ask {
+  color: #0071e3 !important;
+  background: transparent;
+}
+
+#page .shop-action--ask:hover {
+  color: #fff !important;
+  background: #0071e3;
+}
+
+.purchase-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 18px 40px;
+  color: #1d1d1f;
+}
+
+.purchase-title {
+  margin: 20px 0 54px;
+  color: #111 !important;
+  font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  letter-spacing: -0.035em;
+  text-align: center;
+}
+
+.purchase-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 7vw, 86px);
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.purchase-column {
+  text-align: center;
+  color: #1d1d1f;
+}
+
+.purchase-jump {
+  display: inline-block;
+  color: #111 !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.purchase-jump:hover {
+  color: #0071e3 !important;
+}
+
+.purchase-column h2 {
+  margin: 8px 0 30px;
+  color: #111 !important;
+  font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.purchase-label {
+  margin: 24px 0 10px !important;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.purchase-accent {
+  color: #c27d34;
+}
+
+.purchase-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.purchase-star {
+  color: #e5a92f;
+}
+
+.purchase-priority {
+  margin: 28px 0 0;
+  color: #555;
+  font-size: 0.94rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.campaign-lead {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #f5f5f7;
+  line-height: 1.75;
+}
+
+.campaign-lead strong {
+  color: #1d1d1f;
+}
+
+#to-sign,
+#christmas {
+  scroll-margin-top: 92px;
+}
+
+@media (max-width: 640px) {
+  .purchase-page {
+    padding: 16px 14px 36px;
+  }
+  .purchase-title {
+    margin: 8px 0 34px;
+  }
+  .purchase-columns {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .purchase-column h2 {
+    margin-bottom: 22px;
+  }
+}

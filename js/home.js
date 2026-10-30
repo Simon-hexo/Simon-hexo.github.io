@@ -8,13 +8,16 @@
   var cards = Array.prototype.slice.call(track.querySelectorAll('.activity-card'));
   var dots = Array.prototype.slice.call(dotWrap.querySelectorAll('button'));
   if (!cards.length || dots.length !== cards.length) return;
+  var initialIndex = Math.max(0, Math.min(cards.length - 1, parseInt(track.dataset.initialIndex || '0', 10) || 0));
 
   function currentIndex() {
-    var center = track.scrollLeft + track.clientWidth / 2;
+    var trackRect = track.getBoundingClientRect();
+    var center = trackRect.left + trackRect.width / 2;
     var best = 0;
     var bestDist = Infinity;
     cards.forEach(function (card, i) {
-      var cardCenter = card.offsetLeft - track.offsetLeft + card.offsetWidth / 2;
+      var cardRect = card.getBoundingClientRect();
+      var cardCenter = cardRect.left + cardRect.width / 2;
       var dist = Math.abs(cardCenter - center);
       if (dist < bestDist) { bestDist = dist; best = i; }
     });
@@ -30,6 +33,21 @@
     });
   }
 
+  function centerCard(index, behavior) {
+    var card = cards[index];
+    var trackRect = track.getBoundingClientRect();
+    var cardRect = card.getBoundingClientRect();
+    var maxLeft = track.scrollWidth - track.clientWidth;
+    var left = track.scrollLeft + cardRect.left - trackRect.left
+      - (track.clientWidth - cardRect.width) / 2;
+    left = Math.max(0, Math.min(maxLeft, left));
+    if (behavior === 'auto') {
+      track.scrollLeft = left;
+    } else {
+      track.scrollTo({ left: left, behavior: 'smooth' });
+    }
+  }
+
   var ticking = false;
   track.addEventListener('scroll', function () {
     if (ticking) return;
@@ -42,7 +60,7 @@
 
   dots.forEach(function (dot, i) {
     dot.addEventListener('click', function () {
-      cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      centerCard(i, 'smooth');
     });
   });
 
@@ -51,8 +69,9 @@
     e.preventDefault();
     var next = currentIndex() + (e.key === 'ArrowRight' ? 1 : -1);
     next = Math.max(0, Math.min(cards.length - 1, next));
-    cards[next].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    centerCard(next, 'smooth');
   });
 
+  centerCard(initialIndex, 'auto');
   syncDots();
 })();

@@ -4,12 +4,29 @@
 
 /* ---------- 活动横滑栏（图 4 风格） ---------- */
 .activity-rail {
-  --rail-card: min(76vw, 400px);
+  --rail-card: min(76vw, 360px);
   background: #fff;
   border-radius: 18px;
-  padding: 26px 0 18px;
+  padding: 20px 0 16px;
   margin-bottom: 16px;
   overflow: hidden;
+}
+
+.activity-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 22px 12px;
+  color: #1d1d1f;
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.activity-hint {
+  color: #86868b;
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
 .activity-track {
@@ -19,7 +36,7 @@
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 4px calc((100% - var(--rail-card)) / 2) 14px;
+  padding: 4px calc((100% - var(--rail-card)) / 2) 10px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -30,10 +47,11 @@
   flex: 0 0 auto;
   width: var(--rail-card);
   scroll-snap-align: center;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  line-height: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -41,7 +59,12 @@
   transform: translateY(-3px);
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
 }
-.activity-card img {
+.activity-media {
+  display: block;
+  line-height: 0;
+}
+
+.activity-media img {
   display: block;
   width: 100%;
   height: auto;
@@ -49,12 +72,32 @@
   object-fit: cover;
 }
 
+.activity-detail {
+  display: block;
+  margin: 10px 12px 12px;
+  padding: 9px 18px;
+  border: 1.5px solid #0071e3;
+  border-radius: 980px;
+  color: #0071e3 !important;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.activity-detail:hover {
+  color: #fff !important;
+  background: #0071e3;
+}
+
 .activity-dots {
   display: flex;
   gap: 8px;
   justify-content: center;
   align-items: center;
-  padding-top: 4px;
+  padding: 2px 18px 0;
 }
 .activity-dots button {
   width: 7px;
@@ -145,7 +188,10 @@
 /* ---------- 移动端 ---------- */
 @media (max-width: 768px) {
   .activity-rail { --rail-card: min(66vw, 260px); border-radius: 14px; padding: 12px 0 10px; }
+  .activity-heading { padding: 0 14px 8px; font-size: 0.85rem; }
+  .activity-hint { font-size: 0.72rem; }
   .activity-card { border-radius: 14px; }
+  .activity-detail { margin: 8px 9px 9px; padding: 8px 14px; font-size: 0.82rem; }
 
   .product-block { border-radius: 14px; }
   .product-copy { padding: 30px 16px 22px; }
