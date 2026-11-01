@@ -60,6 +60,7 @@
 .purchase-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: clamp(28px, 7vw, 86px);
   max-width: 780px;
   margin: 0 auto;
@@ -72,14 +73,23 @@
 
 .purchase-jump {
   display: inline-block;
-  color: #111 !important;
-  font-size: 1.05rem;
-  font-weight: 600;
+  min-width: 132px;
+  padding: 10px 22px;
+  border: 1.5px solid #0071e3;
+  border-radius: 980px;
+  color: #fff !important;
+  background: #0071e3;
+  font-size: 0.96rem;
+  font-weight: 650;
+  line-height: 1.25;
   text-decoration: none !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .purchase-jump:hover {
-  color: #0071e3 !important;
+  color: #fff !important;
+  border-color: #0077ed;
+  background: #0077ed;
 }
 
 .purchase-column h2 {
@@ -149,10 +159,28 @@
     margin: 8px 0 34px;
   }
   .purchase-columns {
-    grid-template-columns: 1fr;
-    gap: 42px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
   .purchase-column h2 {
-    margin-bottom: 22px;
+    margin: 10px 0 18px;
+    font-size: 1.4rem;
+  }
+  .purchase-jump {
+    min-width: 0;
+    padding: 9px 12px;
+    font-size: 0.86rem;
+  }
+  .purchase-label {
+    margin-top: 18px !important;
+    font-size: 0.86rem;
+  }
+  .purchase-column ul {
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+  .purchase-priority {
+    font-size: 0.78rem;
+    line-height: 1.65;
   }
 }
